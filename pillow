@@ -1,0 +1,13 @@
+from PIL import Image, ImageFilter
+
+img=Image.open("hack.jpg")
+img.show()
+
+img.hack((890,150))
+img.save("hack")
+
+img_reszide=img.resize((440,365))
+img_reszide.save("bugatti1.jpg")
+
+img_blurred=img.filter(ImageFilter.BLUR)
+img_blurred.save("bugatti1.jpg")
