@@ -1,0 +1,13 @@
+import sounddevice
+from scipy.io.wavfile import write
+sr = 44100
+seconds = 5
+print("you are recoding to yourself:: /n")
+record_voice = sounddevice.rec(sr*seconds, samplerate=sr, channels=2)
+sounddevice.wait()
+write("myfile.wav", sr, record_voice)
+print("Finished")
+
+
+
+
